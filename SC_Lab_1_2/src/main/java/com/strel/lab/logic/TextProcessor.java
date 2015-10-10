@@ -3,6 +3,7 @@ package com.strel.lab.logic;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 
 /**
@@ -10,8 +11,11 @@ import java.util.Map;
  */
 public class TextProcessor {
     public static ArrayList<String> process(String input) {
-        Map<String, Integer> words = new HashMap<>();
-        String[] arr = input.split("( +|(!|\\?|,|\\.) )");
+        input = input.toLowerCase();
+        Map<String, Integer> words = new TreeMap<>();
+        String[] arr = input.split("( +|(!|\\?|,|\\.|\\t|\\r|\\n))");
+
+
 
         for (String word : arr) {
             if (words.containsKey(word)) {
@@ -24,7 +28,7 @@ public class TextProcessor {
 
         ArrayList<String> result = new ArrayList<>();
         words.forEach((word, count) -> {
-            if (count == 2)
+            if (count == 1)
                 result.add(word);
         });
 

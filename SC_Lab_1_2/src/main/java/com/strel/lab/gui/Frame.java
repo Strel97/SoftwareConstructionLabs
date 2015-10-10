@@ -133,7 +133,7 @@ public class Frame extends JFrame {
             String input = txtBefore.getText();
             if (!"".equals(input)) {
                 ArrayList<String> words = TextProcessor.process(input);
-                txtAfter.setText("Words, that has only 2 repetitions: \n");
+                txtAfter.setText("Words, that has only 1 repetition: \n");
                 words.forEach(word -> txtAfter.append(word + "\n"));
             } else {
                 JOptionPane.showMessageDialog(null, "Please input some text first", "Input warning", JOptionPane.WARNING_MESSAGE);
