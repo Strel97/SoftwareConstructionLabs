@@ -99,5 +99,5 @@ public class SecondTask {
 
         deleteSomething(flights);
         printMap(flights);
-    }
+       }
 }
