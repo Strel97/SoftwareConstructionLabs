@@ -3,7 +3,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 /**
- * Created by Сергей on 22.10.2015.
+ * Created by пїЅпїЅпїЅпїЅпїЅпїЅ on 22.10.2015.
  */
 public class FirstTask {
 
@@ -62,6 +62,14 @@ public class FirstTask {
         return result_set;
     }
 
+    private static void print(Set set) {
+        System.out.println(" === Set output === ");
+        set.forEach((elem) -> {
+            System.out.print(elem + " ");
+        });
+        System.out.println();
+    }
+
     public static void main(String[] args) {
         fillSet(Z, -30, 50);
 
@@ -70,8 +78,17 @@ public class FirstTask {
         fillSet(C, -10, 10);
         fillSet(D, -30, 50);
 
-        Z = intersection(union(A, difference(B, C)), D);
+        Set<Integer> result = difference(B, C);
+        print(result);
 
-        int end_ = 0;
+        System.out.println();
+
+        result = union(A, result);
+        print(result);
+
+        System.out.println();
+
+        result = intersection(result, D);
+        print(result);
     }
 }

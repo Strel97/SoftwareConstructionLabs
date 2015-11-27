@@ -24,11 +24,13 @@
         <processorPath useClasspath="true" />
         <module name="SC_Lab_1_1" />
         <module name="SC_Lab_1_2" />
+        <module name="SC_Lab_2_1" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="1.8">
       <module name="SC_Lab_1_1" target="1.8" />
       <module name="SC_Lab_1_2" target="1.8" />
+      <module name="SC_Lab_2_1" target="1.8" />
       <module name="SoftwareConstructionLabs" target="1.8" />
     </bytecodeTargetLevel>
   </component>
